@@ -13,37 +13,115 @@
         <div class="row">
             <div class="col-sm">
                 <h3>MC<sup>2</sup> Technology</h3>
+                <h5 class="text-centered">The Bookshelf</h5>
             </div>
         </div>
         <div class="row">
             <hr>
-            <div class="col-sm-6">
-                <div class="customer-form mb-3">
+            <div class="col-sm">
+                <div id="carouselRecommendBooks" class="carousel slide bg-gray" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="book-size col-sm-8">
+                          <img src="./images/JavaScript-Cookbook.jpg" class="d-block w-100 book-size" alt="JavaScript-Cookbook">  
+                        </div>
+                        
+                        <div class="carousel-caption d-none d-md-block book-description col-sm">
+                          <h5>JavaScript Cookbook</h5>
+                          <p>Why reinvent the wheel every time you run into a problem with JavaScript? This cookbook is chock-full of code recipes for common programming tasks, along with techniques for building apps that work in any browser. You'll get adaptable code samples that you can add to almost any project--and you'll learn more about JavaScript in the process.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="book-size col-sm-6">
+                          <img src="./images/JavaScript-design.jpg" class="d-block w-100 book-size" alt="JavaScript-design-patterns">  
+                        </div>
+                        
+                        <div class="carousel-caption d-none d-md-block book-description col-sm">
+                          <h5>JavaScript Design Patterns</h5>
+                          <p>Do you want to write beautiful, structured, and maintainable JavaScript by applying modern design patterns to the language? Do you want clean, efficient, manageable code? Want to stay up-to-date with the latest best practices? If so, the updated second edition of Learning JavaScript Design Patterns is the ideal place to start.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="book-size col-sm-6">
+                          <img src="./images/JavaScript-definitive.jpg" class="d-block w-100 book-size" alt="JavaScript-definitive">  
+                        </div>
+                        
+                        <div class="carousel-caption d-none d-md-block book-description col-sm">
+                          <h5>JavaScript The Definitive Guide</h5>
+                          <p>JavaScript is the programming language of the web and is used by more software developers today than any other programming language. For nearly 25 years this best seller has been the go-to guide for JavaScript programmers. The seventh edition is fully updated to cover the 2020 version of JavaScript, and new chapters cover classes, modules, iterators, generators, Promises, async/await, and metaprogramming. You’ll find illuminating and engaging example code throughout.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <button class="nav-link active">Add</button>
+                        </li>
+                        <li class="nav-item">
+                          <button class="nav-link disabled">Info</a>
+                        </li>
+                        <li class="nav-item">
+                          <button class="nav-link disabled">Delete</a>
+                        </li>
+                      </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div id="left-div" class="col-sm-4 toggle-left">
+                <div class="book-form mb-3">
                     <form class="form" action="" class="">
                         <div class="form-group">
-                            <label for="company-name" class="form-label">Company Name:</label>
-                            <input type="text" name="company-name" id="company-name" class="form-control">
+                            <label for="book-title" class="form-label">Title</label>
+                            <input type="text" name="book-title" id="book-title" class="form-control">
                         </div>
                     </form>
                 </div>
                 
             </div>
-            <div class="col-sm-6">
-                <p class="form-label">Company Table</p>
-                <table class="table table-light table-strip">
+            <div id="mid-div" class="col-sm">
+                <table id="bookshelf" class="table table-light table-strip">
                     <tr>
-                        <th>Company</th>
-                        <th>Address 1</th>
-                        <th>Address 2</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Postal Code</th>
+                        <th>ISBN</th>
+                        <th>Pub Date</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Price</th>
                     </tr>
+                    
                 </table>
+            </div>
+            <div id="right-div" class="col-sm-6 toggle-right">
+                <div class="book-form mb-3">
+                    <form class="form" action="" class="">
+                        
+                    </form>
+                </div>
+                
             </div>
         </div>
     </div>
+    
 </body>
-<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="modules/javascript-app.js" type="modules"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 </html>

@@ -17,6 +17,27 @@ hr:after {
     top: -15px;
 }
 
-.logo-size { 
-    width: 175px;
+.book-size {
+    width: 250px;
+    height: 328px;
+}
+
+.book-description { 
+    left: 275px;
+}
+
+.bg-gray { 
+    padding: 20px 0 20px 130px ;
+    background-image: linear-gradient(140deg, #a7b5e1 0%, #4169E1 35%, #BBBE64 60%, #2d2e03 75%)
+}
+
+.text-centered { 
+    text-align: center;
+}
+.toggle-left { 
+    visibility: collapse;
+}
+
+.toggle-right { 
+    visibility: visible;
 }
