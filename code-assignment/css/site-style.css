@@ -11,8 +11,12 @@ hr {
 
 hr:after { 
     background: #fff;
-    content:  '|';
+    content:  'ℤ';
     padding: 0 4px;
     position: relative;
-    top: -80;
+    top: -15px;
+}
+
+.logo-size { 
+    width: 175px;
 }
