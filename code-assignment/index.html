@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company CRM</title>
+    <title>The Bookshelf</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./css/site-style.css">
 </head>
@@ -18,6 +18,7 @@
         </div>
         <div class="row">
             <hr>
+            <!-- Start Book Carousel Code -->
             <div class="col-sm">
                 <div id="carouselRecommendBooks" class="carousel slide bg-gray" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -70,43 +71,28 @@
         </div>
         <div class="row">
             <div class="col-sm">
+              <!-- Nav Menu Starts Here -->
                 <nav>
                     <ul class="nav">
                         <li class="nav-item">
-                          <button class="nav-link active">Add</button>
+                          <button id="addButton" class="nav-link">Add</button>
                         </li>
                         <li class="nav-item">
-                          <button class="nav-link disabled">Info</a>
+                          <button id="infoButton" class="nav-link disabled">Info</a>
                         </li>
                         <li class="nav-item">
-                          <button class="nav-link disabled">Delete</a>
+                          <button id="delButton" class="nav-link disabled">Delete</a>
                         </li>
                       </ul>
                 </nav>
             </div>
         </div>
         <div class="row">
-            <div id="left-div" class="col-sm-4 toggle-left">
-                <div class="book-form mb-3">
-                    <form class="form" action="" class="">
-                        <div class="form-group">
-                            <label for="book-title" class="form-label">Title</label>
-                            <input type="text" name="book-title" id="book-title" class="form-control">
-                        </div>
-                    </form>
-                </div>
-                
+            <div id="left-div" class="col-sm-4">
+                                
             </div>
             <div id="mid-div" class="col-sm table-responsive">
-                <table id="bookshelf" class="table align-middle table-success table-hover">
-                    <tr>
-                        <th>ISBN</th>
-                        <th>Pub Date</th>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Price</th>
-                    </tr>
-                </table>
+                
             </div>
             <div id="right-div" class="col-sm-6 toggle-right">
                 <div class="book-form mb-3">
@@ -116,10 +102,10 @@
             </div>
         </div>
     </div>
-    
+    <script src="modules/javascript-app.js"  type="module"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
 </body>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="modules/javascript-app.js"  type="module"></script>
+
 </html>
