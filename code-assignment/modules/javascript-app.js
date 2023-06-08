@@ -1,8 +1,9 @@
-console.log('Javascript-app.js file');
-import { BooksTableData } from '../classes/book-table-data'; 
-import books from '../data-service/books-data'; 
+import { BookTableData } from "../classes/book-table-data.js";
+import { books } from "../data-service/books-data.js";
 
-bookShelfTable = document.getElementById('bookshelf');
+const bookshelf = document.getElementById('datarow'); 
 
-books = BooksTableData(books,bookSelfTable); 
-books.loadBooks(); 
+console.log('here');
+
+let bookTable = new BookTableData(books, bookshelf);
+bookTable.loadBooks(books, bookshelf);

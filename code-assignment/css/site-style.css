@@ -39,5 +39,5 @@ hr:after {
 }
 
 .toggle-right { 
-    visibility: visible;
+    visibility: collapse;
 }
