@@ -75,26 +75,39 @@
                 <nav>
                     <ul class="nav">
                         <li class="nav-item">
-                          <button id="addButton" class="nav-link">Add</button>
+                          <button id="add" class="nav-link">Add</button>
                         </li>
                         <li class="nav-item">
-                          <button id="infoButton" class="nav-link disabled">Info</a>
+                          <button id="info" class="nav-link disabled">Info</a>
                         </li>
                         <li class="nav-item">
-                          <button id="delButton" class="nav-link disabled">Delete</a>
+                          <button id="del" class="nav-link disabled">Delete</a>
                         </li>
                       </ul>
                 </nav>
             </div>
         </div>
         <div class="row">
-            <div id="left-div" class="col-sm-4">
+            <div id="left-div" class="col-sm-4 toggle-hide">
                                 
             </div>
             <div id="mid-div" class="col-sm table-responsive">
-                
+                <table class="table table-light table-striped table-hover align-center tbl-bookshelf"> 
+                  <thead>
+                    <th>ISBN</th>
+                    <th>Pub Date</th> 
+                    <th>Title</th>
+                    <th>Author</th> 
+                    <th>Price</th>    
+                    <th>Delete</th>
+                  </thead>
+                  <tbody class="data-rows">
+                    <tr >
+                    </tr>
+                  </tbody>
+                </table>
             </div>
-            <div id="right-div" class="col-sm-6 toggle-right">
+            <div id="right-div" class="col-sm-6 toggle-hide">
                 <div class="book-form mb-3">
                     
                 </div>

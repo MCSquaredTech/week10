@@ -34,10 +34,12 @@ hr:after {
 .text-centered { 
     text-align: center;
 }
-.toggle-left { 
+
+.toggle-show { 
+    visibility: visible;
+}
+
+.toggle-hide { 
     visibility: collapse;
 }
 
-.toggle-right { 
-    visibility: collapse;
-}

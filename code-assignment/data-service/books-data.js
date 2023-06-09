@@ -1,4 +1,4 @@
-export let books = [ 
+export let bookArray = [ 
     {
         isbn: '1492055751',
         pubdate: 'August 24, 2021',
