@@ -38,7 +38,7 @@ export let bookArray = [
         description: "Updated - buy it now! If you're serious about taking your career to the next level, you need to be on LinkedIn®. In LinkedIn In 30 Minutes (2nd Edition), author Angela Rose will show you how to make a rock-solid LinkedIn profile and expand your network. Whether you want to find a new job on LinkedIn or advance your career, this guide can be the blueprint for a supercharged LinkedIn strategy.",        
         image: './images/LinkedIn.jpg', 
         price: '11.99'
-    }
+    },
     // {
     //     isbn: '',
     //     pubdate: '',

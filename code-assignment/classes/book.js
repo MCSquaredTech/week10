@@ -1,32 +1,32 @@
 
 export class Book { 
-    constructor(isbn, pubDate, title, author, description, price) {
+    constructor(isbn, pubDate, title, author, description, price) { 
         this._isbn = isbn; 
         this._pubDate = pubDate; 
         this._title = title; 
         this._author = author; 
         this._description = description; 
-        this._price = price; 
+        this._price = price;
     }
 
-    get isbn() {
+    get isbn() { 
         return this._isbn; 
     }
     set isbn(value) { 
-        this._isbn = value; 
+        this._isbn = value;
     }
 
     get pubDate() { 
         return this._pubDate; 
     }
-    set pubDate(value) { 
-        this.pubDate = value;
+    set pubDate(value) {
+        this.pubDate = value; 
     }
 
     get title() { 
-        return this._title; 
+        return this._title;
     }
-    set title(value) { 
+    set title(value) {
         this._title = value;
     }
 
@@ -51,4 +51,5 @@ export class Book {
         this._price = value;
     }
 
+    
 }

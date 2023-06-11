@@ -1,11 +1,15 @@
+import { BookTableData } from "./book-table-data.js";
+import { bookArray } from '../data-service/books-data.js';
 
 export class BookFormData { 
     constructor(entry) {
         this.insertPoint = entry;
     }
 
-    displayForm() {
+    displayForm(books) {
+        this.clearForm(this.insertPoint);
         const bookForm = document.createElement('form');
+        bookForm.classList.add('bookForm');
         let frmISBN = document.createElement('div'); 
         frmISBN.classList.add('from-group');
         frmISBN.innerHTML = (`
@@ -63,10 +67,40 @@ export class BookFormData {
        
         let frmGroup = document.createElement('div')
         frmGroup.classList.add('form-group');
-        frmGroup.innerHTML = (`
-            <button class='btn btn-primary form-control' id='submit'>submit</button>
-        `);
+        // frmGroup.innerHTML = (`
+        //     <button class='btn btn-primary form-control' id='submit'>submit</button>
+        // `);
+        let addBookButton = this.createNewBook(books);
+        frmGroup.appendChild(addBookButton);
         bookForm.appendChild(frmGroup);
         this.insertPoint.appendChild(bookForm);
+    }
+
+    createNewBook(books) { 
+        let btn = document.createElement('button');
+        btn.className = 'btn btn-primary form-control';
+        btn.innerHTML = 'Add Book'; 
+        
+        btn.onclick = (e) => {
+            e.preventDefault();
+            books.add(document.getElementById('isbn-10').value, 
+            document.getElementById('pub-date').value, 
+            document.getElementById('title').value, 
+            document.getElementById('author').value, 
+            document.getElementById('description').value, 
+            document.getElementById('price').value);
+            
+            const bookshelf = document.querySelector('.data-rows'); 
+            let bookTable = new BookTableData(books, bookshelf);
+            this.displayForm(books);
+            bookTable.drawTableRows();
+        }    
+        return btn;
+    }
+
+    clearForm(element) {
+        while(element.firstChild) { 
+            element.removeChild(element.firstChild);
+        }
     }
 }
