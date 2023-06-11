@@ -24,19 +24,8 @@ export class BookTableData  {
             let action = newRow.insertCell(5); 
             action.appendChild(this.clickDeleteButton(book));  
             this.bookTable.appendChild(newRow);
-        } 
-        // this.tableRowClicked();   
+        }    
     }
-    
-    // tableRowClicked = () => { 
-    //     let els = document.querySelectorAll('.data-rows tr'); 
-    //     for (let el of els) { 
-    //         el.addEventListener('click', (el) => {
-                
-    //             alert(el.tagName)
-    //         });
-    //     }
-    // }
 
     clearDataRows(element) {
         while(element.firstChild) { 
